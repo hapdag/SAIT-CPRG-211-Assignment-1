@@ -44,13 +44,22 @@ namespace Assignment_1
                             appList.Add(new Refriderator(itemNumber,brand,quantity,wattage,colour,price,height,width,numOfDoors));
                             break;
                         case '2':
-
+                            string grade = applianceData[6].Trim();
+                            int voltage = Int32.Parse(applianceData[7].Trim());
+                            appList.Add(new Vacuum(itemNumber,brand,quantity,wattage,colour,price,grade,voltage));
                             break;
                         case '3':
+                            double capacity = double.Parse(applianceData[6].Trim());
+                            string roomType = applianceData[7].Trim();
+                            appList.Add(new Microwave(itemNumber, brand, quantity, wattage, colour, price, roomType, capacity));
                             break;
                         case '4':
+                            string rating = applianceData[6].Trim(), feature = applianceData[7].Trim();
+                            appList.Add(new Dishwasher(itemNumber,brand,quantity, wattage, colour, price,feature, rating));
                             break;
                         case '5':
+                            string rating1 = applianceData[6].Trim(), feature1 = applianceData[7].Trim();
+                            appList.Add(new Dishwasher(itemNumber, brand, quantity, wattage, colour, price, feature1, rating1));
                             break;
                     }
                 }
