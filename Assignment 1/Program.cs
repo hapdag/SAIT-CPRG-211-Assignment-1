@@ -23,26 +23,39 @@ namespace Assignment_1
                 else
                 {
                     String[] applianceData = s.Split(';');
+                    string brand, colour;
+                    double wattage, price;
+                    long itemNumber;
+                    int quantity;
+                    itemNumber = long.Parse(applianceData[0].Trim());
+                    brand = applianceData[1].Trim();
+                    quantity = Int32.Parse(applianceData[2].Trim());
+                    wattage = double.Parse(applianceData[3].Trim());
+                    colour = applianceData[4].Trim();
+                    price = double.Parse(applianceData[5].Trim());
+
                     switch (applianceData[0][0])
                     {
                         case '1':
-                            Console.WriteLine("fridge");
+                            int numOfDoors, height, width;
+                            numOfDoors = Int32.Parse(applianceData[6].Trim());
+                            height = Int32.Parse(applianceData[7].Trim());
+                            width = Int32.Parse(applianceData[8].Trim());
+                            appList.Add(new Refriderator(itemNumber,brand,quantity,wattage,colour,price,height,width,numOfDoors));
                             break;
                         case '2':
-                            Console.WriteLine("Vacuum");
+
                             break;
                         case '3':
-                            Console.WriteLine("Microwave");
                             break;
                         case '4':
-                            Console.WriteLine("Dishwasher");
                             break;
                         case '5':
-                            Console.WriteLine("Dishwasher");
                             break;
                     }
                 }
             }
+            Console.WriteLine(appList.Count);
         }
     }
 }

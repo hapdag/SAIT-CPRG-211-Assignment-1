@@ -7,24 +7,24 @@
       "RelativeMoniker": "D:0:0:{D1CACF5A-6D99-4643-B2E3-12FB695019DB}|Assignment 1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D1CACF5A-6D99-4643-B2E3-12FB695019DB}|Assignment 1.csproj|c:\\users\\syhe\\onedrive\\desktop\\school\\sait spring 2024\\oop 2 cprg-211-b\\assignment 1\\git\\sait-cprg-211-assignment-1\\assignment 1\\appliance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D1CACF5A-6D99-4643-B2E3-12FB695019DB}|Assignment 1.csproj|solutionrelative:appliance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D1CACF5A-6D99-4643-B2E3-12FB695019DB}|Assignment 1.csproj|c:\\users\\syhe\\onedrive\\desktop\\school\\sait spring 2024\\oop 2 cprg-211-b\\assignment 1\\git\\sait-cprg-211-assignment-1\\assignment 1\\refriderator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D1CACF5A-6D99-4643-B2E3-12FB695019DB}|Assignment 1.csproj|solutionrelative:refriderator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1CACF5A-6D99-4643-B2E3-12FB695019DB}|Assignment 1.csproj|c:\\users\\syhe\\onedrive\\desktop\\school\\sait spring 2024\\oop 2 cprg-211-b\\assignment 1\\git\\sait-cprg-211-assignment-1\\assignment 1\\appliance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1CACF5A-6D99-4643-B2E3-12FB695019DB}|Assignment 1.csproj|solutionrelative:appliance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D1CACF5A-6D99-4643-B2E3-12FB695019DB}|Assignment 1.csproj|c:\\users\\syhe\\onedrive\\desktop\\school\\sait spring 2024\\oop 2 cprg-211-b\\assignment 1\\git\\sait-cprg-211-assignment-1\\assignment 1\\resources\\appliances.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{D1CACF5A-6D99-4643-B2E3-12FB695019DB}|Assignment 1.csproj|solutionrelative:resources\\appliances.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D1CACF5A-6D99-4643-B2E3-12FB695019DB}|Assignment 1.csproj|c:\\users\\syhe\\onedrive\\desktop\\school\\sait spring 2024\\oop 2 cprg-211-b\\assignment 1\\git\\sait-cprg-211-assignment-1\\assignment 1\\dishwasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D1CACF5A-6D99-4643-B2E3-12FB695019DB}|Assignment 1.csproj|solutionrelative:dishwasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D1CACF5A-6D99-4643-B2E3-12FB695019DB}|Assignment 1.csproj|c:\\users\\syhe\\onedrive\\desktop\\school\\sait spring 2024\\oop 2 cprg-211-b\\assignment 1\\git\\sait-cprg-211-assignment-1\\assignment 1\\vacuum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D1CACF5A-6D99-4643-B2E3-12FB695019DB}|Assignment 1.csproj|solutionrelative:vacuum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1CACF5A-6D99-4643-B2E3-12FB695019DB}|Assignment 1.csproj|c:\\users\\syhe\\onedrive\\desktop\\school\\sait spring 2024\\oop 2 cprg-211-b\\assignment 1\\git\\sait-cprg-211-assignment-1\\assignment 1\\dishwasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1CACF5A-6D99-4643-B2E3-12FB695019DB}|Assignment 1.csproj|solutionrelative:dishwasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D1CACF5A-6D99-4643-B2E3-12FB695019DB}|Assignment 1.csproj|c:\\users\\syhe\\onedrive\\desktop\\school\\sait spring 2024\\oop 2 cprg-211-b\\assignment 1\\git\\sait-cprg-211-assignment-1\\assignment 1\\microwave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
@@ -48,14 +48,14 @@
               "RelativeDocumentMoniker": "Resources\\appliances.txt",
               "ToolTip": "C:\\Users\\syhe\\OneDrive\\Desktop\\school\\SAIT Spring 2024\\OOP 2 CPRG-211-B\\Assignment 1\\git\\SAIT-CPRG-211-Assignment-1\\Assignment 1\\Resources\\appliances.txt",
               "RelativeToolTip": "Resources\\appliances.txt",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAKAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
               "WhenOpened": "2024-06-25T19:41:02.568Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Dishwasher.cs",
               "DocumentMoniker": "C:\\Users\\syhe\\OneDrive\\Desktop\\school\\SAIT Spring 2024\\OOP 2 CPRG-211-B\\Assignment 1\\git\\SAIT-CPRG-211-Assignment-1\\Assignment 1\\Dishwasher.cs",
               "RelativeDocumentMoniker": "Dishwasher.cs",
@@ -64,19 +64,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-25T19:04:05.501Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\syhe\\OneDrive\\Desktop\\school\\SAIT Spring 2024\\OOP 2 CPRG-211-B\\Assignment 1\\git\\SAIT-CPRG-211-Assignment-1\\Assignment 1\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\syhe\\OneDrive\\Desktop\\school\\SAIT Spring 2024\\OOP 2 CPRG-211-B\\Assignment 1\\git\\SAIT-CPRG-211-Assignment-1\\Assignment 1\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAADwvykAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T18:08:18.341Z",
               "EditorCaption": ""
             },
             {
@@ -94,7 +81,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "Vacuum.cs",
               "DocumentMoniker": "C:\\Users\\syhe\\OneDrive\\Desktop\\school\\SAIT Spring 2024\\OOP 2 CPRG-211-B\\Assignment 1\\git\\SAIT-CPRG-211-Assignment-1\\Assignment 1\\Vacuum.cs",
               "RelativeDocumentMoniker": "Vacuum.cs",
@@ -107,28 +94,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Refriderator.cs",
               "DocumentMoniker": "C:\\Users\\syhe\\OneDrive\\Desktop\\school\\SAIT Spring 2024\\OOP 2 CPRG-211-B\\Assignment 1\\git\\SAIT-CPRG-211-Assignment-1\\Assignment 1\\Refriderator.cs",
               "RelativeDocumentMoniker": "Refriderator.cs",
               "ToolTip": "C:\\Users\\syhe\\OneDrive\\Desktop\\school\\SAIT Spring 2024\\OOP 2 CPRG-211-B\\Assignment 1\\git\\SAIT-CPRG-211-Assignment-1\\Assignment 1\\Refriderator.cs",
               "RelativeToolTip": "Refriderator.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAgwBEAAAAJAAAA",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAQwBEAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-25T19:03:15.006Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Appliance.cs",
               "DocumentMoniker": "C:\\Users\\syhe\\OneDrive\\Desktop\\school\\SAIT Spring 2024\\OOP 2 CPRG-211-B\\Assignment 1\\git\\SAIT-CPRG-211-Assignment-1\\Assignment 1\\Appliance.cs",
               "RelativeDocumentMoniker": "Appliance.cs",
               "ToolTip": "C:\\Users\\syhe\\OneDrive\\Desktop\\school\\SAIT Spring 2024\\OOP 2 CPRG-211-B\\Assignment 1\\git\\SAIT-CPRG-211-Assignment-1\\Assignment 1\\Appliance.cs",
               "RelativeToolTip": "Appliance.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAA0wBEAAABLAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAwAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-25T18:26:45.968Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\syhe\\OneDrive\\Desktop\\school\\SAIT Spring 2024\\OOP 2 CPRG-211-B\\Assignment 1\\git\\SAIT-CPRG-211-Assignment-1\\Assignment 1\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\syhe\\OneDrive\\Desktop\\school\\SAIT Spring 2024\\OOP 2 CPRG-211-B\\Assignment 1\\git\\SAIT-CPRG-211-Assignment-1\\Assignment 1\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAQwDgAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T18:08:18.341Z",
               "EditorCaption": ""
             }
           ]
