@@ -22,6 +22,16 @@ namespace Assignment_1
         public string Color { get { return _color; } set { _color = value; } }
         public double Price { get { return _price; } set { _price = value; } }
 
+        public Appliance(long itemNumber, string brand, int quantity, double wattage, string color, double price)
+        {
+            this._itemNumber = itemNumber;
+            this._brand = brand;
+            this._quantity = quantity;
+            this._wattage = wattage;
+            this._color = color;
+            this._price = price;
+        }
+
         public abstract bool isAvailable();
         public abstract void checkout();
         public abstract string formatForFile();

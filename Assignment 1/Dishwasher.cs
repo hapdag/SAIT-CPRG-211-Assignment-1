@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignment_1
 {
-    internal class Dishwasher
+    internal class Dishwasher : Appliance
     {
     }
 }
