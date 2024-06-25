@@ -1,0 +1,75 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace crpg211_assignment_1
+{
+    public class User_prompt
+    {
+        public static void main()
+
+        {
+            // main menu
+            Console.WriteLine("Welcome to Modern Appliances!");
+            Console.WriteLine("How may we assist you");
+            Console.WriteLine("1-Check out appliance");
+            Console.WriteLine("2-Find appliance by brand");
+            Console.WriteLine("3-Display appliance by type");
+            Console.WriteLine("4-Produce random appliance list");
+            Console.WriteLine("5-Save & exit");
+            Console.WriteLine("Enter option:");
+            int assist_options = Convert.ToInt32(Console.ReadLine());
+
+            //checks out appliances
+            if (assist_options == 1) 
+            {
+                Console.WriteLine("Please enter the item number of the appliance:");
+                int appliance_number = Convert.ToInt32(Console.ReadLine());
+                //checks to see if item is available
+                if (appliance_number != ItemNumber)
+                {
+                    Console.WriteLine("No appliance found with that item number.");
+                }
+                if (appliance_number == ItemNumber )
+                {
+                    if (isAvailable == true) ;
+                    {
+                        Console.WriteLine("appliance" + ItemNumber + "has been checked out")
+
+
+                    }
+                    else { Console.WriteLine("The appliance is not available to be checked out")}
+                }
+            }
+
+            else if (assist_options == 2)
+            {
+                Console.WriteLine("enter a brand to search for:");
+                string brand_name = ToLower(Console.ReadLine());
+
+                Console.WriteLine("Matching Appliances:");
+
+              
+            }
+
+            else if(assist_options == 3)
+            {
+
+            }
+
+            else if(assist_options == 4)
+            {
+
+            } 
+            
+            else if(assist_options == 5)
+            {
+
+            }
+
+            else {Console.WriteLine("Enter a valid number")};
+        }
+    }
+}
