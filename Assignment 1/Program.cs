@@ -10,11 +10,10 @@ namespace Assignment_1
 {
     internal class Program
     {
-        static void Main(string[] args)
+        public static void FileParse(List<Appliance> appList)
         {
             String[] fileData = Resources.appliances.Split('\n');
-            List<Appliance> appList = new List<Appliance>();
-            foreach (String s in fileData) 
+            foreach (String s in fileData)
             {
                 if (String.IsNullOrEmpty(s))
                 {
@@ -41,12 +40,12 @@ namespace Assignment_1
                             numOfDoors = Int32.Parse(applianceData[6].Trim());
                             height = Int32.Parse(applianceData[7].Trim());
                             width = Int32.Parse(applianceData[8].Trim());
-                            appList.Add(new Refriderator(itemNumber,brand,quantity,wattage,colour,price,height,width,numOfDoors));
+                            appList.Add(new Refriderator(itemNumber, brand, quantity, wattage, colour, price, height, width, numOfDoors));
                             break;
                         case '2':
                             string grade = applianceData[6].Trim();
                             int voltage = Int32.Parse(applianceData[7].Trim());
-                            appList.Add(new Vacuum(itemNumber,brand,quantity,wattage,colour,price,grade,voltage));
+                            appList.Add(new Vacuum(itemNumber, brand, quantity, wattage, colour, price, grade, voltage));
                             break;
                         case '3':
                             double capacity = double.Parse(applianceData[6].Trim());
@@ -55,7 +54,7 @@ namespace Assignment_1
                             break;
                         case '4':
                             string rating = applianceData[6].Trim(), feature = applianceData[7].Trim();
-                            appList.Add(new Dishwasher(itemNumber,brand,quantity, wattage, colour, price,feature, rating));
+                            appList.Add(new Dishwasher(itemNumber, brand, quantity, wattage, colour, price, feature, rating));
                             break;
                         case '5':
                             string rating1 = applianceData[6].Trim(), feature1 = applianceData[7].Trim();
@@ -64,7 +63,15 @@ namespace Assignment_1
                     }
                 }
             }
-            Console.WriteLine(appList.Count);
+        }
+        static void Main(string[] args)
+        {
+            List<Appliance> appList = new List<Appliance>();
+            FileParse(appList);
+            foreach (var item in appList)
+            {
+                Console.WriteLine(item.GetType());
+            }
         }
     }
 }
