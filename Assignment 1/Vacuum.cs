@@ -10,7 +10,8 @@ namespace Assignment_1
     {
         private string _grade;
         private int _voltage;
-
+        public string Grade { get { return _grade; } set { _grade = value; } }
+        public int Voltage { get { return _voltage; } set { _voltage = value; } }
         public Vacuum(long itemNumber, string brand, int quantity, double wattage, string color, double price, string grade, int voltage) : base(itemNumber, brand, quantity, wattage, color, price)
         {
             _grade = grade;
