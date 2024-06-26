@@ -27,9 +27,9 @@ namespace Assignment_1
             throw new NotImplementedException();
         }
 
-        public override string toString()
+        public override string ToString()
         {
-            throw new NotImplementedException();
+            return $"Item Number: {ItemNumber}\nBrand: {Brand}\nQuantity: {Quantity}\nWattage: {Wattage}\nColour: {Color}\nPrice: {Price}\nNumber of Doors: {NumOfDoors}\nHeight: {Height}\nWidth: {31}\n";
         }
     }
 }

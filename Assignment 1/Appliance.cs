@@ -52,8 +52,7 @@ namespace Assignment_1
             Console.WriteLine($"Appliance {_itemNumber} has been checked out.");
         }
         public abstract string formatForFile();
-        public abstract string toString();
-
+        
 
     }
 }

@@ -15,6 +15,18 @@ namespace Assignment_1
             Console.Write("Welcome to Modern Appliances!\r\nHow may we assist you?\r\n1 – Check out appliance\r\n2 – Find appliances by brand\r\n3 – Display appliances by type\r\n4 – Produce random appliance list\r\n5 – Save & exit\r\nEnter option:\r\n");
         }
 
+        public static void BrandSearch(List<Appliance> appList)
+        {
+            Console.WriteLine("\n\nEnter brand to search for:");
+            string brandName = Console.ReadLine();
+            foreach (var app in appList)
+            {
+                if (app.Brand.ToLower() == brandName.ToLower())
+                {
+                    Console.WriteLine(app);
+                }
+            }
+        }
         public static void ApplianceCheckout(List<Appliance> appList)
         {
             Console.WriteLine("Enter item number of an Appliance:");
@@ -112,6 +124,7 @@ namespace Assignment_1
                         ApplianceCheckout(appList);
                         break;
                     case 2:
+                        BrandSearch(appList);
                         break;
                     case 3:
                         break;
