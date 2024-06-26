@@ -10,6 +10,38 @@ namespace Assignment_1
 {
     internal class Program
     {
+        public static void PrintMenu()
+        {
+            Console.Write("\n\n\n\nWelcome to Modern Appliances!\r\nHow may we assist you?\r\n1 – Check out appliance\r\n2 – Find appliances by brand\r\n3 – Display appliances by type\r\n4 – Produce random appliance list\r\n5 – Save & exit\r\nEnter option:\r\n");
+        }
+
+        public static void ApplianceCheckout(List<Appliance> appList)
+        {
+            Console.WriteLine("Enter item number of an Appliance:");
+            long userItemNum = long.Parse(Console.ReadLine());
+            bool itemFound = false;
+            foreach (var appliance in appList)
+            {
+                if (appliance.ItemNumber == userItemNum)
+                {
+                    itemFound = true;
+                    if (appliance.isAvailable is false)
+                    {
+                        Console.WriteLine("The appliance is not available to be checked out.");
+                        break;
+                    }
+                    else
+                    {
+                        appliance.Quantity = appliance.Quantity - 1;
+                        Console.WriteLine($"Appliance {appliance.ItemNumber} has been checked out.");
+                        // Console.WriteLine($"current applicance count is {appliance.Quantity}");
+                    }
+                    break;
+                }
+            }
+            if (itemFound is false) { Console.WriteLine("No appliances found with that item number."); }
+        }
+
         public static void FileParse(List<Appliance> appList)
         {
             String[] fileData = Resources.appliances.Split('\n');
@@ -68,9 +100,26 @@ namespace Assignment_1
         {
             List<Appliance> appList = new List<Appliance>();
             FileParse(appList);
-            foreach (var item in appList)
+
+            PrintMenu();
+            int userInput = int.Parse(Console.ReadLine());
+
+            while (userInput != 5)
             {
-                Console.WriteLine(item.isAvailable);
+                switch(userInput)
+                {
+                    case 1:
+                        ApplianceCheckout(appList);
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        break;
+                }
+                PrintMenu();
+                userInput = int.Parse(Console.ReadLine());
             }
         }
     }
