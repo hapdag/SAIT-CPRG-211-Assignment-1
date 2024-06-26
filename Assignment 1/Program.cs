@@ -15,6 +15,25 @@ namespace Assignment_1
             Console.Write("Welcome to Modern Appliances!\r\nHow may we assist you?\r\n1 – Check out appliance\r\n2 – Find appliances by brand\r\n3 – Display appliances by type\r\n4 – Produce random appliance list\r\n5 – Save & exit\r\nEnter option:\r\n");
         }
 
+        public static void RandomAppliance(List<Appliance> appList)
+        {
+            Random rnd = new Random();
+            Console.WriteLine("Enter number of appliances:");
+            int inputNum = int.Parse(Console.ReadLine());
+            if (inputNum > appList.Count())
+            {
+                Console.WriteLine("Error: Entered number exceeds total number of appliances in stock.\n");
+            }
+            else
+            {
+                Console.WriteLine("\nRandom appliances:");
+                for (int i = 0; i < inputNum; i++)
+                {
+                    int rndNum = rnd.Next(0, appList.Count());
+                    Console.WriteLine(appList[rndNum]);
+                }
+            }
+        }
         public static void BrandSearch(List<Appliance> appList)
         {
             Console.WriteLine("\n\nEnter brand to search for:");
@@ -45,7 +64,6 @@ namespace Assignment_1
                     else
                     {
                         appliance.checkout();
-                        // Console.WriteLine($"current applicance count is {appliance.Quantity}");
                     }
                     break;
                 }
@@ -116,6 +134,7 @@ namespace Assignment_1
             PrintMenu();
             int userInput = int.Parse(Console.ReadLine());
 
+
             while (userInput != 5)
             {
                 switch(userInput)
@@ -127,8 +146,18 @@ namespace Assignment_1
                         BrandSearch(appList);
                         break;
                     case 3:
+                        Console.Write("Appliance Types\r\n1 – Refrigerators\r\n2 – Vacuums\r\n3 – Microwaves\r\n4 – Dishwashers\r\nEnter type of appliance:\r\n");
+                        int userAppType = int.Parse(Console.ReadLine());
+                        switch (userAppType)
+                        {
+                            case 1:break;
+                            case 2:break;
+                            case 3:break;
+                            case 4:break;
+                        }
                         break;
                     case 4:
+                        RandomAppliance(appList);
                         break;
                 }
                 PrintMenu();
