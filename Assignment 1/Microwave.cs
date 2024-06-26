@@ -28,11 +28,6 @@ namespace Assignment_1
             throw new NotImplementedException();
         }
 
-        public override bool isAvailable()
-        {
-            throw new NotImplementedException();
-        }
-
         public override string toString()
         {
             throw new NotImplementedException();

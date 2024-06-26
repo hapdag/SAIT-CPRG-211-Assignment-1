@@ -70,7 +70,7 @@ namespace Assignment_1
             FileParse(appList);
             foreach (var item in appList)
             {
-                Console.WriteLine(item.GetType());
+                Console.WriteLine(item.isAvailable);
             }
         }
     }

@@ -21,6 +21,20 @@ namespace Assignment_1
         public double Wattage { get { return _wattage; } set { _wattage = value; } }
         public string Color { get { return _color; } set { _color = value; } }
         public double Price { get { return _price; } set { _price = value; } }
+        public bool isAvailable
+        {
+            get
+            {
+                if(_quantity > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        } 
 
         public Appliance(long itemNumber, string brand, int quantity, double wattage, string color, double price)
         {
@@ -32,7 +46,6 @@ namespace Assignment_1
             this._price = price;
         }
 
-        public abstract bool isAvailable();
         public abstract void checkout();
         public abstract string formatForFile();
         public abstract string toString();
