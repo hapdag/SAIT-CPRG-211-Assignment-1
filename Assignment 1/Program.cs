@@ -1,7 +1,9 @@
 ﻿using Assignment_1.Properties;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Resources;
 using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Text;
 using System.Threading.Tasks;
@@ -163,6 +165,15 @@ namespace Assignment_1
                 PrintMenu();
                 userInput = int.Parse(Console.ReadLine());
             }
+            string filePath = @"C:\Users\syhe\OneDrive\Desktop\school\SAIT Spring 2024\OOP 2 CPRG-211-B\Assignment 1\git\SAIT-CPRG-211-Assignment-1\Assignment 1\Resources\output.txt";
+            using (StreamWriter writer = new StreamWriter(filePath))
+            {
+                foreach (var appliance in appList) 
+                {
+                    writer.WriteLine(appliance);
+                }
+            }
+
         }
     }
 }

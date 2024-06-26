@@ -68,5 +68,8 @@
   <ItemGroup>
     <None Include="Resources\appliances.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
