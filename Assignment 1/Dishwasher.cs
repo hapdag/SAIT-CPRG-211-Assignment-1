@@ -17,10 +17,6 @@ namespace Assignment_1
             _feature = feature;
             _soundRating = soundRating;
         }
-        public override void checkout()
-        {
-            throw new NotImplementedException();
-        }
 
         public override string formatForFile()
         {

@@ -21,10 +21,6 @@ namespace Assignment_1
             _numOfDoors = numOfDoors;
         }
 
-        public override void checkout()
-        {
-            throw new NotImplementedException();
-        }
 
         public override string formatForFile()
         {

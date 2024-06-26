@@ -18,10 +18,6 @@ namespace Assignment_1
             _voltage = voltage;
         }
 
-        public override void checkout()
-        {
-            throw new NotImplementedException();
-        }
 
         public override string formatForFile()
         {

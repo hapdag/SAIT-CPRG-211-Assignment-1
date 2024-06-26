@@ -46,7 +46,11 @@ namespace Assignment_1
             this._price = price;
         }
 
-        public abstract void checkout();
+        public void checkout()
+        {
+            _quantity--;
+            Console.WriteLine($"Appliance {_itemNumber} has been checked out.");
+        }
         public abstract string formatForFile();
         public abstract string toString();
 

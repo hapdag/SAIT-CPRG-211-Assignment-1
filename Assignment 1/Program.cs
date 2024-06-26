@@ -12,7 +12,7 @@ namespace Assignment_1
     {
         public static void PrintMenu()
         {
-            Console.Write("\n\n\n\nWelcome to Modern Appliances!\r\nHow may we assist you?\r\n1 – Check out appliance\r\n2 – Find appliances by brand\r\n3 – Display appliances by type\r\n4 – Produce random appliance list\r\n5 – Save & exit\r\nEnter option:\r\n");
+            Console.Write("Welcome to Modern Appliances!\r\nHow may we assist you?\r\n1 – Check out appliance\r\n2 – Find appliances by brand\r\n3 – Display appliances by type\r\n4 – Produce random appliance list\r\n5 – Save & exit\r\nEnter option:\r\n");
         }
 
         public static void ApplianceCheckout(List<Appliance> appList)
@@ -32,14 +32,14 @@ namespace Assignment_1
                     }
                     else
                     {
-                        appliance.Quantity = appliance.Quantity - 1;
-                        Console.WriteLine($"Appliance {appliance.ItemNumber} has been checked out.");
+                        appliance.checkout();
                         // Console.WriteLine($"current applicance count is {appliance.Quantity}");
                     }
                     break;
                 }
             }
             if (itemFound is false) { Console.WriteLine("No appliances found with that item number."); }
+            Console.WriteLine("\n\n\n\n");
         }
 
         public static void FileParse(List<Appliance> appList)
