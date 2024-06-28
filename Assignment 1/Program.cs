@@ -194,10 +194,16 @@ namespace Assignment_1
                                 }
                                 break;
                             case 3:
+                                Console.WriteLine("Room where the microwave will be installed: K (kitchen) or W (work site):");
+                                string room = Console.ReadLine();
                                 var microwaves = appList.OfType<Microwave>();
                                 foreach (var x in microwaves)
                                 {
-                                    Console.WriteLine($"{x}");
+                                    Microwave tempMic = (Microwave)x;
+                                    if (string.Equals(tempMic.RoomType, room, StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        Console.WriteLine(tempMic);
+                                    }
                                 }
                                 break;
                             case 4:break;
