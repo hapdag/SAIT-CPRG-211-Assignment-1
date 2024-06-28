@@ -16,7 +16,89 @@ namespace Assignment_1
         {
             Console.Write("Welcome to Modern Appliances!\r\nHow may we assist you?\r\n1 – Check out appliance\r\n2 – Find appliances by brand\r\n3 – Display appliances by type\r\n4 – Produce random appliance list\r\n5 – Save & exit\r\nEnter option:\r\n");
         }
-
+        private static void SearchAppByType(List<Appliance> appList)
+        {
+            Console.Write("Appliance Types\r\n1 – Refrigerators\r\n2 – Vacuums\r\n3 – Microwaves\r\n4 – Dishwashers\r\nEnter type of appliance:\r\n");
+            int userAppType = int.Parse(Console.ReadLine());
+            IEnumerable<Refrigerator> frigeList = from app in appList where app.ItemNumber.ToString().First() is '1' select (Refrigerator)app;
+            IEnumerable<Vacuum> vacList = from app in appList where app.ItemNumber.ToString().First() is '2' select (Vacuum)app;
+            IEnumerable<Microwave> micList = from app in appList where app.ItemNumber.ToString().First() is '3' select (Microwave)app;
+            IEnumerable<Dishwasher> dishList = from app in appList where app.ItemNumber.ToString().First() is '4' || app.ItemNumber.ToString().First() is '5' select (Dishwasher)app;
+            switch (userAppType)
+            {
+                case 1:
+                    Console.WriteLine("Enter number of doors: 2 (double door), 3 (three doors) or 4 (four doors):");
+                    int doorNum = int.Parse(Console.ReadLine());
+                    if (doorNum > 4)
+                    {
+                        Console.WriteLine("Input exceeds possible number of doors\n");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Matching refrigerators: ");
+                        foreach (Refrigerator frige in frigeList)
+                        {
+                            if (frige.NumOfDoors == (Refrigerator.Doors)doorNum)
+                            {
+                                Console.WriteLine(frige);
+                            }
+                        }
+                    }
+                    break;
+                case 2:
+                    Console.WriteLine("Enter battery voltage value. 18 V (low) or 24 V (high)");
+                    int volt = int.Parse(Console.ReadLine());
+                    if (volt is 18 | volt is 24)
+                    {
+                        foreach (Vacuum vacuum in vacList)
+                        {
+                            if (vacuum.BatVoltage == (Vacuum.Voltage)volt)
+                            {
+                                Console.WriteLine(vacuum);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid vacuum voltage\n");
+                    }
+                    break;
+                case 3:
+                    Console.WriteLine("Room where the microwave will be installed: K (kitchen) or W (work site):");
+                    string room = Console.ReadLine();
+                    if (string.Equals(room, "w", StringComparison.OrdinalIgnoreCase))
+                    {
+                        room = "work site";
+                    }
+                    else if (string.Equals(room, "k", StringComparison.OrdinalIgnoreCase))
+                    {
+                        room = "kitchen";
+                    }
+                    else { Console.WriteLine("Invalid room type.\n"); }
+                    foreach (Microwave mic in micList)
+                    {
+                        if (string.Equals(mic.RoomType, room, StringComparison.OrdinalIgnoreCase))
+                        {
+                            Console.WriteLine(mic);
+                        }
+                    }
+                    break;
+                case 4:
+                    Console.WriteLine("Enter the sound rating of the dishwasher: Qt (Quietest), Qr (Quieter), Qu(Quiet) or M (Moderate):");
+                    string rating = Console.ReadLine();
+                    rating = rating[0].ToString().ToUpper() + rating.Substring(1);
+                    Dictionary<string, string> ratingDict = new Dictionary<string, string>() { { "Qt", "Quietest" }, { "Qr", "Quieter" }, { "Qu", "Quiet" }, { "M", "Moderate" } };
+                    foreach (Dishwasher washer in dishList)
+                    {
+                        if (string.Equals(ratingDict[rating], washer.SoundRating, StringComparison.OrdinalIgnoreCase))
+                        {
+                            Console.WriteLine(washer);
+                        }
+                    }
+                    break;
+            }
+            Console.WriteLine("\n\n\n");
+        }
         public static void RandomAppliance(List<Appliance> appList)
         {
             Random rnd = new Random();
@@ -38,15 +120,21 @@ namespace Assignment_1
         }
         public static void BrandSearch(List<Appliance> appList)
         {
-            Console.WriteLine("\n\nEnter brand to search for:");
+            Console.WriteLine("\nEnter brand to search for:");
             string brandName = Console.ReadLine();
-            foreach (var app in appList)
+            var allBrands = from app in appList select app.Brand.ToUpper();
+            if (allBrands.Contains(brandName.ToUpper()))
             {
-                if (app.Brand.ToLower() == brandName.ToLower())
+                foreach (var app in appList)
                 {
-                    Console.WriteLine(app);
+                    if ( string.Equals(brandName,app.Brand, StringComparison.OrdinalIgnoreCase) )
+                    {
+                        Console.WriteLine(app);
+                    }
                 }
             }
+            else { Console.WriteLine("Appliance catalog does not contain this brand!\n"); }
+            Console.WriteLine("\n\n\n");
         }
         public static void ApplianceCheckout(List<Appliance> appList)
         {
@@ -71,7 +159,7 @@ namespace Assignment_1
                 }
             }
             if (itemFound is false) { Console.WriteLine("No appliances found with that item number."); }
-            Console.WriteLine("\n\n\n\n");
+            Console.WriteLine("\n\n\n");
         }
 
         public static void FileParse(List<Appliance> appList)
@@ -117,11 +205,11 @@ namespace Assignment_1
                             appList.Add(new Microwave(itemNumber, brand, quantity, wattage, colour, price, roomType, capacity));
                             break;
                         case '4':
-                            string rating = applianceData[6].Trim(), feature = applianceData[7].Trim();
+                            string feature = applianceData[6].Trim(), rating = applianceData[7].Trim();
                             appList.Add(new Dishwasher(itemNumber, brand, quantity, wattage, colour, price, feature, rating));
                             break;
                         case '5':
-                            string rating1 = applianceData[6].Trim(), feature1 = applianceData[7].Trim();
+                            string feature1 = applianceData[6].Trim(), rating1 = applianceData[7].Trim();
                             appList.Add(new Dishwasher(itemNumber, brand, quantity, wattage, colour, price, feature1, rating1));
                             break;
                     }
@@ -145,69 +233,7 @@ namespace Assignment_1
                         BrandSearch(appList);
                         break;
                     case 3:
-                        Console.Write("Appliance Types\r\n1 – Refrigerators\r\n2 – Vacuums\r\n3 – Microwaves\r\n4 – Dishwashers\r\nEnter type of appliance:\r\n");
-                        int userAppType = int.Parse(Console.ReadLine());
-                        switch (userAppType)
-                        {
-                            case 1:
-                                Console.WriteLine("Enter number of doors: 2 (double door), 3 (three doors) or 4 (four doors):");
-                                int doorNum = int.Parse(Console.ReadLine());
-                                if(doorNum > 4)
-                                {
-                                    Console.WriteLine("Input exceeds possible number of doors\n");
-                                }
-                                else
-                                {
-                                    foreach(var appliance in appList)
-                                    {
-                                        if (appliance is Refrigerator)
-                                        {
-                                            Refrigerator tempFrige = (Refrigerator)appliance;
-                                            if (tempFrige.NumOfDoors == doorNum)
-                                            {
-                                                Console.WriteLine(tempFrige);
-                                            }
-                                        }
-                                    }
-                                }
-                                break;
-                            case 2:
-                                Console.WriteLine("Enter battery voltage value. 18 V (low) or 24 V (high)");
-                                int volt = int.Parse(Console.ReadLine());
-                                if (volt == 18 |  volt == 24)
-                                {
-                                    foreach (var appliance in appList)
-                                    {
-                                        if(appliance is Vacuum)
-                                        {
-                                            Vacuum tempVac = (Vacuum)appliance;
-                                            if(tempVac.Voltage == volt)
-                                            {
-                                                Console.WriteLine(tempVac);
-                                            }
-                                        }
-                                    }
-                                }
-                                else
-                                {
-                                    Console.WriteLine("Invalid vacuum voltage\n");
-                                }
-                                break;
-                            case 3:
-                                Console.WriteLine("Room where the microwave will be installed: K (kitchen) or W (work site):");
-                                string room = Console.ReadLine();
-                                var microwaves = appList.OfType<Microwave>();
-                                foreach (var x in microwaves)
-                                {
-                                    Microwave tempMic = (Microwave)x;
-                                    if (string.Equals(tempMic.RoomType, room, StringComparison.OrdinalIgnoreCase))
-                                    {
-                                        Console.WriteLine(tempMic);
-                                    }
-                                }
-                                break;
-                            case 4:break;
-                        }
+                        SearchAppByType(appList);
                         break;
                     case 4:
                         RandomAppliance(appList);
@@ -226,5 +252,7 @@ namespace Assignment_1
             }
 
         }
+
+
     }
 }

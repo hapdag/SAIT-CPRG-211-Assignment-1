@@ -10,8 +10,16 @@ namespace Assignment_1
     {
         private string _feature;
         private string _soundRating;
-        public string Feature { get { return _feature; } set { _feature = value; } }
-        public string SoundRating { get { return _soundRating; } set { _soundRating = value; } }
+        public string Feature { get { return _feature; } }
+        public string SoundRating { 
+            get 
+            { 
+                if (_soundRating is "Qt") { return "Quietest"; }
+                else if (_soundRating is "Qr") { return "Quieter"; }
+                else if ( _soundRating is "Qu") { return "Quiet"; }
+                else { return "Moderate"; }
+            } 
+        }
         public Dishwasher(long itemNumber, string brand, int quantity, double wattage, string color, double price, string feature, string soundRating) : base(itemNumber, brand, quantity, wattage, color, price)
         {
             _feature = feature;

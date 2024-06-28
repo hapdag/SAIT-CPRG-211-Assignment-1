@@ -9,13 +9,17 @@ namespace Assignment_1
     internal class Vacuum : Appliance
     {
         private string _grade;
-        private int _voltage;
+        private Voltage _voltage;
         public string Grade { get { return _grade; } set { _grade = value; } }
-        public int Voltage { get { return _voltage; } set { _voltage = value; } }
+        public Voltage BatVoltage { get { return _voltage; } }
+        public enum Voltage
+        {
+            Low = 18, High = 24
+        }
         public Vacuum(long itemNumber, string brand, int quantity, double wattage, string color, double price, string grade, int voltage) : base(itemNumber, brand, quantity, wattage, color, price)
         {
             _grade = grade;
-            _voltage = voltage;
+            _voltage = (Voltage)voltage;
         }
 
 
@@ -27,7 +31,7 @@ namespace Assignment_1
 
         public override string ToString()
         {
-            return $"Item Number: {ItemNumber}\nBrand: {Brand}\nQuantity: {Quantity}Wattage: {Wattage}\n Colour: {Color}\nPrice: {Price}\nGrade: {Grade}\nBattery Voltage: {Voltage}\n";
+            return $"Item Number: {ItemNumber}\nBrand: {Brand}\nQuantity: {Quantity}\nWattage: {Wattage}\nColour: {Color}\nPrice: {Price}\nGrade: {Grade}\nBattery Voltage: {BatVoltage}\n";
         }
     }
 }

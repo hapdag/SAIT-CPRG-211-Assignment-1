@@ -11,7 +11,13 @@ namespace Assignment_1
     {
         private string _roomType;
         private double _capacity;
-        public string RoomType { get { return _roomType; } set { _roomType = value; } }
+        public string RoomType { 
+            get
+            {
+                if (string.Equals(_roomType,"w", StringComparison.OrdinalIgnoreCase)) { return "Work site"; } else { return "Kitchen"; } 
+            } 
+            set 
+            { _roomType = value; } }
         public double Capacity { get { return _capacity; }set { _capacity = value; } }
         public Microwave(long itemNumber, string brand, int quantity, double wattage, string color, double price, string roomType, double capacity) : base(itemNumber, brand, quantity, wattage, color, price)
         {

@@ -4,7 +4,7 @@ Quantity: 174
 Wattage: 60
 Colour: black
 Price: 2000
-Number of Doors: 2
+Number of Doors: Double Doors
 Height: 62
 Width: 31
 
@@ -13,56 +13,59 @@ Brand: Tefal
 Quantity: 90Wattage: 700
  Colour: bronze
 Price: 320
-Feature: Qt
-Sound Rating: Third Rack
+Feature: Third Rack
+Sound Rating: Quietest
 
 Item Number: 516089502
 Brand: Hoover
 Quantity: 240Wattage: 1200
  Colour: silver
 Price: 250
-Feature: Qr
-Sound Rating: Finger Print Resistant
+Feature: Finger Print Resistant
+Sound Rating: Quieter
 
 Item Number: 255131796
 Brand: Black & Decker
-Quantity: 55Wattage: 1500
- Colour: white
+Quantity: 55
+Wattage: 1500
+Colour: white
 Price: 500
 Grade: Residential
-Battery Voltage: 18
+Battery Voltage: Low
 
 Item Number: 254565387
 Brand: Miele
-Quantity: 86Wattage: 1000
- Colour: grey
+Quantity: 86
+Wattage: 1000
+Colour: grey
 Price: 800
 Grade: Commercial
-Battery Voltage: 24
+Battery Voltage: High
 
 Item Number: 571522655
 Brand: Philips
 Quantity: 228Wattage: 440
  Colour: grey
 Price: 390
-Feature: M
-Sound Rating: Finger Print Resistant
+Feature: Finger Print Resistant
+Sound Rating: Moderate
 
 Item Number: 263788832
 Brand: Hoover
-Quantity: 59Wattage: 600
- Colour: black
+Quantity: 59
+Wattage: 600
+Colour: black
 Price: 750
 Grade: Residential
-Battery Voltage: 18
+Battery Voltage: Low
 
 Item Number: 408018499
 Brand: Bosch
 Quantity: 54Wattage: 500
  Colour: white
 Price: 250
-Feature: Qu
-Sound Rating: Third Rack
+Feature: Third Rack
+Sound Rating: Quiet
 
 Item Number: 143826003
 Brand: Kenwood
@@ -70,33 +73,36 @@ Quantity: 0
 Wattage: 4700
 Colour: silver
 Price: 1500
-Number of Doors: 2
+Number of Doors: Double Doors
 Height: 62
 Width: 31
 
 Item Number: 231784690
 Brand: Russell Hobbs
-Quantity: 155Wattage: 175
- Colour: grey
+Quantity: 155
+Wattage: 175
+Colour: grey
 Price: 380
 Grade: Residential
-Battery Voltage: 18
+Battery Voltage: Low
 
 Item Number: 243074424
 Brand: Tefal
-Quantity: 61Wattage: 4000
- Colour: black
+Quantity: 61
+Wattage: 4000
+Colour: black
 Price: 760
 Grade: Residential
-Battery Voltage: 18
+Battery Voltage: Low
 
 Item Number: 297972916
 Brand: Dyson
-Quantity: 104Wattage: 1400
- Colour: bronze
+Quantity: 104
+Wattage: 1400
+Colour: bronze
 Price: 530
 Grade: Commercial
-Battery Voltage: 24
+Battery Voltage: High
 
 Item Number: 146947171
 Brand: Black & Decker
@@ -104,7 +110,7 @@ Quantity: 112
 Wattage: 1800
 Colour: grey
 Price: 1800
-Number of Doors: 3
+Number of Doors: Three Doors
 Height: 70
 Width: 31
 
@@ -115,15 +121,15 @@ Wattage: 100
  Colour: white
 Price: 99.99
 Capacity: 1.1
-Room Type: K
+Room Type: Kitchen
 
 Item Number: 493374445
 Brand: Philips
 Quantity: 125Wattage: 1650
  Colour: silver
 Price: 510
-Feature: M
-Sound Rating: Clean with Steam
+Feature: Clean with Steam
+Sound Rating: Moderate
 
 Item Number: 383477937
 Brand: Miele
@@ -132,7 +138,7 @@ Wattage: 2350
  Colour: white
 Price: 179.9
 Capacity: 1.8
-Room Type: K
+Room Type: Kitchen
 
 Item Number: 119638199
 Brand: Vax
@@ -140,33 +146,35 @@ Quantity: 134
 Wattage: 1200
 Colour: black
 Price: 2650
-Number of Doors: 4
+Number of Doors: Four Doors
 Height: 66
 Width: 31
 
 Item Number: 244733872
 Brand: Bosch
-Quantity: 133Wattage: 700
- Colour: grey
+Quantity: 133
+Wattage: 700
+Colour: grey
 Price: 430
 Grade: Commercial
-Battery Voltage: 24
+Battery Voltage: High
 
 Item Number: 587065284
 Brand: Kenwood
 Quantity: 74Wattage: 1010
  Colour: silver
 Price: 430
-Feature: Qu
-Sound Rating: Clean with Steam
+Feature: Clean with Steam
+Sound Rating: Quiet
 
 Item Number: 240201796
 Brand: Dyson
-Quantity: 81Wattage: 1050
- Colour: white
+Quantity: 81
+Wattage: 1050
+Colour: white
 Price: 290
 Grade: Residential
-Battery Voltage: 18
+Battery Voltage: Low
 
 Item Number: 172911121
 Brand: Philips
@@ -174,7 +182,7 @@ Quantity: 144
 Wattage: 700
 Colour: black
 Price: 3100
-Number of Doors: 3
+Number of Doors: Three Doors
 Height: 71
 Width: 31
 
@@ -185,7 +193,7 @@ Wattage: 1200
  Colour: bronze
 Price: 250.23
 Capacity: 2.1
-Room Type: W
+Room Type: Work site
 
 Item Number: 118963476
 Brand: Russell Hobbs
@@ -193,7 +201,7 @@ Quantity: 146
 Wattage: 1150
 Colour: grey
 Price: 2360
-Number of Doors: 4
+Number of Doors: Four Doors
 Height: 73
 Width: 31
 
@@ -204,13 +212,14 @@ Wattage: 440
  Colour: silver
 Price: 123.99
 Capacity: 1.6
-Room Type: W
+Room Type: Work site
 
 Item Number: 274807482
 Brand: Black & Decker
-Quantity: 30Wattage: 1800
- Colour: black
+Quantity: 30
+Wattage: 1800
+Colour: black
 Price: 375
 Grade: Commercial
-Battery Voltage: 24
+Battery Voltage: High
 
