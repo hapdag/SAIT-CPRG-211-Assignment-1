@@ -25,7 +25,7 @@ namespace Assignment_1
 
         public override string formatForFile()
         {
-            throw new NotImplementedException();
+            return $"{ItemNumber};{Brand};{Quantity};{Wattage};{Color};{Price};{_grade};{(int)_voltage};";
         }
 
 

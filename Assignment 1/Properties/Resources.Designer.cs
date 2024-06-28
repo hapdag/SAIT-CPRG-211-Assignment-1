@@ -77,14 +77,5 @@ namespace Assignment_1.Properties {
                 return ResourceManager.GetString("appliances", resourceCulture);
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to .
-        /// </summary>
-        internal static string output {
-            get {
-                return ResourceManager.GetString("output", resourceCulture);
-            }
-        }
     }
 }

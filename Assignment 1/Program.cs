@@ -50,6 +50,7 @@ namespace Assignment_1
                     int volt = int.Parse(Console.ReadLine());
                     if (volt is 18 | volt is 24)
                     {
+                        Console.WriteLine("Matching Vacuums: ");
                         foreach (Vacuum vacuum in vacList)
                         {
                             if (vacuum.BatVoltage == (Vacuum.Voltage)volt)
@@ -65,22 +66,22 @@ namespace Assignment_1
                     break;
                 case 3:
                     Console.WriteLine("Room where the microwave will be installed: K (kitchen) or W (work site):");
-                    string room = Console.ReadLine();
-                    if (string.Equals(room, "w", StringComparison.OrdinalIgnoreCase))
+                    string room = Console.ReadLine().ToUpper();
+                    Dictionary<string,string> roomDict = new Dictionary<string, string>() { { "K","Kitchen" },{ "W","Work site" } };
+                    if (roomDict.Keys.Contains(room))
                     {
-                        room = "work site";
-                    }
-                    else if (string.Equals(room, "k", StringComparison.OrdinalIgnoreCase))
-                    {
-                        room = "kitchen";
-                    }
-                    else { Console.WriteLine("Invalid room type.\n"); }
-                    foreach (Microwave mic in micList)
-                    {
-                        if (string.Equals(mic.RoomType, room, StringComparison.OrdinalIgnoreCase))
+                        Console.WriteLine("Matching microwaves: ");
+                        foreach (Microwave mic in micList)
                         {
-                            Console.WriteLine(mic);
+                            if (string.Equals(mic.RoomType, roomDict[room], StringComparison.OrdinalIgnoreCase))
+                            {
+                                Console.WriteLine(mic);
+                            }
                         }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid room type entered.\n");
                     }
                     break;
                 case 4:
@@ -88,12 +89,20 @@ namespace Assignment_1
                     string rating = Console.ReadLine();
                     rating = rating[0].ToString().ToUpper() + rating.Substring(1);
                     Dictionary<string, string> ratingDict = new Dictionary<string, string>() { { "Qt", "Quietest" }, { "Qr", "Quieter" }, { "Qu", "Quiet" }, { "M", "Moderate" } };
-                    foreach (Dishwasher washer in dishList)
+                    if (ratingDict.Keys.Contains(rating))
                     {
-                        if (string.Equals(ratingDict[rating], washer.SoundRating, StringComparison.OrdinalIgnoreCase))
+                        Console.WriteLine("Matching dishwashers:");
+                        foreach (Dishwasher washer in dishList)
                         {
-                            Console.WriteLine(washer);
+                            if (string.Equals(ratingDict[rating], washer.SoundRating, StringComparison.OrdinalIgnoreCase))
+                            {
+                                Console.WriteLine(washer);
+                            }
                         }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid sound rating entered.");
                     }
                     break;
             }
@@ -242,12 +251,14 @@ namespace Assignment_1
                 PrintMenu();
                 userInput = int.Parse(Console.ReadLine());
             }
-            string filePath = @"C:\Users\syhe\OneDrive\Desktop\school\SAIT Spring 2024\OOP 2 CPRG-211-B\Assignment 1\git\SAIT-CPRG-211-Assignment-1\Assignment 1\Resources\output.txt";
+            //string filePath = @"C:\Users\syhe\OneDrive\Desktop\school\SAIT Spring 2024\OOP 2 CPRG-211-B\Assignment 1\git\SAIT-CPRG-211-Assignment-1\Assignment 1\Resources\appliances.txt";
+            string runningPath = AppDomain.CurrentDomain.BaseDirectory;
+            string filePath = string.Format("{0}Resources\\appliances.txt", Path.GetFullPath(Path.Combine(runningPath, @"..\..\")));
             using (StreamWriter writer = new StreamWriter(filePath))
             {
                 foreach (var appliance in appList) 
                 {
-                    writer.WriteLine(appliance);
+                    writer.WriteLine(appliance.formatForFile());
                 }
             }
 

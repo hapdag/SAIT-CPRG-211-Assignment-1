@@ -31,12 +31,12 @@ namespace Assignment_1
 
         public override string formatForFile()
         {
-            return $"{ItemNumber};{Brand};{Quantity};{Wattage};{Color};{Price};{NumOfDoors};{Height};{Width};\n";
+            return $"{ItemNumber};{Brand};{Quantity};{Wattage};{Color};{Price};{(int)_numOfDoors};{_height};{_width};";
         }
 
         public override string ToString()
         {
-            return $"Item Number: {ItemNumber}\nBrand: {Brand}\nQuantity: {Quantity}\nWattage: {Wattage}\nColour: {Color}\nPrice: {Price}\nNumber of Doors: {NumOfDoors} Doors\nHeight: {Height}\nWidth: {31}\n";
+            return $"Item Number: {ItemNumber}\nBrand: {Brand}\nQuantity: {Quantity}\nWattage: {Wattage}\nColour: {Color}\nPrice: {Price}\nNumber of Doors: {NumOfDoors} Doors\nHeight: {Height}\nWidth: {Width}\n";
         }
     }
 }

@@ -28,12 +28,12 @@ namespace Assignment_1
 
         public override string formatForFile()
         {
-            throw new NotImplementedException();
+            return $"{ItemNumber};{Brand};{Quantity};{Wattage};{Color};{Price};{_capacity};{_roomType};";
         }
 
         public override string ToString()
         {
-            return $"Item Number: {ItemNumber}\nBrand: {Brand}\nQuantity: {Quantity}\nWattage: {Wattage}\n Colour: {Color}\nPrice: {Price}\nCapacity: {Capacity}\nRoom Type: {RoomType}\n";
+            return $"Item Number: {ItemNumber}\nBrand: {Brand}\nQuantity: {Quantity}\nWattage: {Wattage}\nColour: {Color}\nPrice: {Price}\nCapacity: {Capacity}\nRoom Type: {RoomType}\n";
         }
     }
 }
