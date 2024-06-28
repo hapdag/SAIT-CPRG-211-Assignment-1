@@ -53,7 +53,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Refriderator.cs" />
+    <Compile Include="Refrigerator.cs" />
     <Compile Include="Vacuum.cs" />
   </ItemGroup>
   <ItemGroup>

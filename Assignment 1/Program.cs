@@ -104,7 +104,7 @@ namespace Assignment_1
                             numOfDoors = Int32.Parse(applianceData[6].Trim());
                             height = Int32.Parse(applianceData[7].Trim());
                             width = Int32.Parse(applianceData[8].Trim());
-                            appList.Add(new Refriderator(itemNumber, brand, quantity, wattage, colour, price, height, width, numOfDoors));
+                            appList.Add(new Refrigerator(itemNumber, brand, quantity, wattage, colour, price, height, width, numOfDoors));
                             break;
                         case '2':
                             string grade = applianceData[6].Trim();
@@ -132,11 +132,8 @@ namespace Assignment_1
         {
             List<Appliance> appList = new List<Appliance>();
             FileParse(appList);
-
             PrintMenu();
             int userInput = int.Parse(Console.ReadLine());
-
-
             while (userInput != 5)
             {
                 switch(userInput)
@@ -152,9 +149,57 @@ namespace Assignment_1
                         int userAppType = int.Parse(Console.ReadLine());
                         switch (userAppType)
                         {
-                            case 1:break;
-                            case 2:break;
-                            case 3:break;
+                            case 1:
+                                Console.WriteLine("Enter number of doors: 2 (double door), 3 (three doors) or 4 (four doors):");
+                                int doorNum = int.Parse(Console.ReadLine());
+                                if(doorNum > 4)
+                                {
+                                    Console.WriteLine("Input exceeds possible number of doors\n");
+                                }
+                                else
+                                {
+                                    foreach(var appliance in appList)
+                                    {
+                                        if (appliance is Refrigerator)
+                                        {
+                                            Refrigerator tempFrige = (Refrigerator)appliance;
+                                            if (tempFrige.NumOfDoors == doorNum)
+                                            {
+                                                Console.WriteLine(tempFrige);
+                                            }
+                                        }
+                                    }
+                                }
+                                break;
+                            case 2:
+                                Console.WriteLine("Enter battery voltage value. 18 V (low) or 24 V (high)");
+                                int volt = int.Parse(Console.ReadLine());
+                                if (volt == 18 |  volt == 24)
+                                {
+                                    foreach (var appliance in appList)
+                                    {
+                                        if(appliance is Vacuum)
+                                        {
+                                            Vacuum tempVac = (Vacuum)appliance;
+                                            if(tempVac.Voltage == volt)
+                                            {
+                                                Console.WriteLine(tempVac);
+                                            }
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Invalid vacuum voltage\n");
+                                }
+                                break;
+                            case 3:
+                                var microwaves = appList.OfType<Microwave>();
+                                foreach (var x in microwaves)
+                                {
+                                    Console.WriteLine($"{x}");
+                                }
+                                break;
                             case 4:break;
                         }
                         break;

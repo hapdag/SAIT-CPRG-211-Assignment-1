@@ -27,7 +27,7 @@ namespace Assignment_1
 
         public override string ToString()
         {
-            return $"Item Number: {ItemNumber}\nBrand: {Brand}\nQuantity: {Quantity}Wattage: {Wattage}\n Colour: {Color}\nPrice: {Price}\nCapacity: {Capacity}\nRoom Type: {RoomType}\n";
+            return $"Item Number: {ItemNumber}\nBrand: {Brand}\nQuantity: {Quantity}\nWattage: {Wattage}\n Colour: {Color}\nPrice: {Price}\nCapacity: {Capacity}\nRoom Type: {RoomType}\n";
         }
     }
 }
