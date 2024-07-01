@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace Assignment_1
 {
+    
+    // Appliance parent abstract class for all children appliance classes
     internal abstract class Appliance
     {
         private long _itemNumber;
@@ -21,6 +23,8 @@ namespace Assignment_1
         public double Wattage { get { return _wattage; } set { _wattage = value; } }
         public string Color { get { return _color; } set { _color = value; } }
         public double Price { get { return _price; } set { _price = value; } }
+        
+        // returns bool after checking for quantity
         public bool isAvailable
         {
             get

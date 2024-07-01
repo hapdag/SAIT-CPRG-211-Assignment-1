@@ -11,6 +11,8 @@ namespace Assignment_1
         private string _feature;
         private string _soundRating;
         public string Feature { get { return _feature; } }
+        
+        // sound rating property returns specific sound ratings when reqeusted
         public string SoundRating { 
             get 
             { 

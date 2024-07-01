@@ -12,18 +12,27 @@ namespace Assignment_1
 {
     internal class Program
     {
+
+        // print main menu to console
         public static void PrintMenu()
         {
             Console.Write("Welcome to Modern Appliances!\r\nHow may we assist you?\r\n1 – Check out appliance\r\n2 – Find appliances by brand\r\n3 – Display appliances by type\r\n4 – Produce random appliance list\r\n5 – Save & exit\r\nEnter option:\r\n");
         }
+
+        // searches and outputs appliances by user specified type and special features
         private static void SearchAppByType(List<Appliance> appList)
         {
             Console.Write("Appliance Types\r\n1 – Refrigerators\r\n2 – Vacuums\r\n3 – Microwaves\r\n4 – Dishwashers\r\nEnter type of appliance:\r\n");
             int userAppType = int.Parse(Console.ReadLine());
+
+            // LINQ selections to make separate enumerate objects for different types of appliance object classes
+            // query from appList and then cast into the correct child class type
             IEnumerable<Refrigerator> frigeList = from app in appList where app.ItemNumber.ToString().First() is '1' select (Refrigerator)app;
             IEnumerable<Vacuum> vacList = from app in appList where app.ItemNumber.ToString().First() is '2' select (Vacuum)app;
             IEnumerable<Microwave> micList = from app in appList where app.ItemNumber.ToString().First() is '3' select (Microwave)app;
             IEnumerable<Dishwasher> dishList = from app in appList where app.ItemNumber.ToString().First() is '4' || app.ItemNumber.ToString().First() is '5' select (Dishwasher)app;
+            
+            // generates output according to user input
             switch (userAppType)
             {
                 case 1:
@@ -108,8 +117,11 @@ namespace Assignment_1
             }
             Console.WriteLine("\n\n\n");
         }
+
+        // outputs a list of random appliances according to the number from user input
         public static void RandomAppliance(List<Appliance> appList)
         {
+            // make new random obj for random number generation
             Random rnd = new Random();
             Console.WriteLine("Enter number of appliances:");
             int inputNum = int.Parse(Console.ReadLine());
@@ -119,6 +131,7 @@ namespace Assignment_1
             }
             else
             {
+                // outputs user input number of random appliances
                 Console.WriteLine("\nRandom appliances:");
                 for (int i = 0; i < inputNum; i++)
                 {
@@ -127,11 +140,17 @@ namespace Assignment_1
                 }
             }
         }
+
+        // searchs appList for all appliances with user input brand name
         public static void BrandSearch(List<Appliance> appList)
         {
             Console.WriteLine("\nEnter brand to search for:");
             string brandName = Console.ReadLine();
-            var allBrands = from app in appList select app.Brand.ToUpper();
+
+            // LINQ statement to find brand names for all appliances in appList
+            IEnumerable<string> allBrands = from app in appList select app.Brand.ToUpper();
+
+            // iterates through the enumerable, outputs appliances matching user input brand if found
             if (allBrands.Contains(brandName.ToUpper()))
             {
                 foreach (var app in appList)
@@ -145,12 +164,17 @@ namespace Assignment_1
             else { Console.WriteLine("Appliance catalog does not contain this brand!\n"); }
             Console.WriteLine("\n\n\n");
         }
+
+        // checks out appliances according to user input and appliance availablity
         public static void ApplianceCheckout(List<Appliance> appList)
         {
             Console.WriteLine("Enter item number of an Appliance:");
             long userItemNum = long.Parse(Console.ReadLine());
             bool itemFound = false;
-            foreach (var appliance in appList)
+
+            // iterates over appList for appliance with same itemID as user input
+            // checks out the found item for user if appliance availablity returns true
+            foreach (Appliance appliance in appList)
             {
                 if (appliance.ItemNumber == userItemNum)
                 {
@@ -171,6 +195,7 @@ namespace Assignment_1
             Console.WriteLine("\n\n\n");
         }
 
+        // Parses txt file and populates appList with child appliance objects
         public static void FileParse(List<Appliance> appList)
         {
             String[] fileData = Resources.appliances.Split('\n');
@@ -217,6 +242,7 @@ namespace Assignment_1
                             string feature = applianceData[6].Trim(), rating = applianceData[7].Trim();
                             appList.Add(new Dishwasher(itemNumber, brand, quantity, wattage, colour, price, feature, rating));
                             break;
+                        // case 5 of the switch case is a repeat of case 4 since itemID with leading 4s and 5s are both dishwashers
                         case '5':
                             string feature1 = applianceData[6].Trim(), rating1 = applianceData[7].Trim();
                             appList.Add(new Dishwasher(itemNumber, brand, quantity, wattage, colour, price, feature1, rating1));
@@ -227,7 +253,10 @@ namespace Assignment_1
         }
         static void Main(string[] args)
         {
+            // makes list of Appliance abstract type to store child appliance objects
             List<Appliance> appList = new List<Appliance>();
+            
+            // parses txt file and populate appList
             FileParse(appList);
             PrintMenu();
             int userInput = int.Parse(Console.ReadLine());
@@ -236,22 +265,28 @@ namespace Assignment_1
                 switch(userInput)
                 {
                     case 1:
+                        // checks out appliance - see ApplianceCheckout local method for more info
                         ApplianceCheckout(appList);
                         break;
                     case 2:
+                        // searches appliances by brand - see BrandSearch local method for more info
                         BrandSearch(appList);
                         break;
                     case 3:
+                        // searches appliances by type - see SearchAppByType local method for more info
                         SearchAppByType(appList);
                         break;
                     case 4:
+                        // outputs a list of random appliances - see RandomAppliance local method for more info
                         RandomAppliance(appList);
                         break;
                 }
                 PrintMenu();
                 userInput = int.Parse(Console.ReadLine());
             }
-            //string filePath = @"C:\Users\syhe\OneDrive\Desktop\school\SAIT Spring 2024\OOP 2 CPRG-211-B\Assignment 1\git\SAIT-CPRG-211-Assignment-1\Assignment 1\Resources\appliances.txt";
+
+            // Writes output into appliances.txt in resource folder
+            // Uses AppDomain to find reletive current path for VS solution
             string runningPath = AppDomain.CurrentDomain.BaseDirectory;
             string filePath = string.Format("{0}Resources\\appliances.txt", Path.GetFullPath(Path.Combine(runningPath, @"..\..\")));
             using (StreamWriter writer = new StreamWriter(filePath))
@@ -261,9 +296,6 @@ namespace Assignment_1
                     writer.WriteLine(appliance.formatForFile());
                 }
             }
-
         }
-
-
     }
 }

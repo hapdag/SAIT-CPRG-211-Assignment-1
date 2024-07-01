@@ -12,6 +12,8 @@ namespace Assignment_1
         private int _height;
         private int _width;
         private Doors _numOfDoors;
+        
+        // enum type for doors, each door type is indexed according to the number of doors they are assigned
         public enum Doors
         {
             Double = 2,

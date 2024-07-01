@@ -12,6 +12,8 @@ namespace Assignment_1
         private Voltage _voltage;
         public string Grade { get { return _grade; } set { _grade = value; } }
         public Voltage BatVoltage { get { return _voltage; } }
+
+        // Voltage enum types, each type indexed at their corresponding battery voltages
         public enum Voltage
         {
             Low = 18, High = 24

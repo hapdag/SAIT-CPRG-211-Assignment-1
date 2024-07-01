@@ -11,6 +11,8 @@ namespace Assignment_1
     {
         private string _roomType;
         private double _capacity;
+
+        // RoomType property returns descriptive room types when called
         public string RoomType { 
             get
             {
