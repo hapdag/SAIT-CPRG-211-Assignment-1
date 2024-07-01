@@ -1,4 +1,11 @@
-﻿using Assignment_1.Properties;
+﻿// Student Names: Siyuan He, Joshua Thomson
+// Program description:
+// This program parses the appliances.txt file from Resources folder, populate a list of the parent appliance type
+// The program then produces a set of outputs depending on the user's inputs, provided to them via menu printed to console
+// When the program exits, whatever changes made to the quantity of appliances are saved and written back to rhe appliances.txt file
+
+
+using Assignment_1.Properties;
 using System;
 using System.Collections.Generic;
 using System.IO;
